@@ -1,2 +1,4 @@
+Gemfile.lock
+.rvmrc
 .bundle
 vendor/ruby

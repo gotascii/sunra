@@ -1,7 +1,14 @@
 require 'helper'
 
-class TestSunra < MiniTest::Unit::TestCase
-  def test_something_for_real
-    flunk "hey buddy, you should probably rename this file and start testing for real"
+class App < Sunra::Base
+  get "/" do
+    "Hello World"
+  end
+end
+
+class SunraTest < MiniTest::Unit::TestCase
+  def test_should_successfully_get
+    get("/")
+    assert_body "Hello World"    
   end
 end
