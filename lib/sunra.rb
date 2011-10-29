@@ -1,6 +1,14 @@
+# abstract_controller is necessary for ActionController::Metal
+# requires a handful of active_support features
+# autoloads everything in AbstractController
 require "abstract_controller"
-require "action_dispatch"
+
+
 require "action_controller/metal"
+
+
+require "action_dispatch"
+
 
 module Sunra
   class Base < ActionController::Metal
